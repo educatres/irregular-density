@@ -49,7 +49,7 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid 
 .ghost-btn:hover,.ghost-dark-btn:hover{background:white;border-color:#b9d7d4}
 main{min-height:calc(100vh - 130px)}
 .hero{
-  min-height:calc(100vh - 72px);
+  min-height:calc(100dvh - 72px);
   padding:70px clamp(22px,7vw,110px);
   display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:60px;
   max-width:1500px;margin:auto
@@ -126,6 +126,9 @@ main{min-height:calc(100vh - 130px)}
 .panel-title{display:flex;justify-content:space-between;align-items:center;gap:10px}
 .panel-title h3{margin:0;font-size:1.2rem}
 .level-chip,.score-chip{font-size:.78rem;font-weight:900;background:#eaf7f5;color:var(--primary);padding:7px 10px;border-radius:999px}
+.mission-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.mission-tags span{font-size:.72rem;font-weight:900;padding:6px 9px;border-radius:999px;background:#f0f4f4;color:#496765}
+.mission-tags span:last-child{background:#fff4d9;color:#8a6412}
 .mission-panel>p{color:var(--muted);line-height:1.6}
 .instruction-box{background:#f0f9f7;border-left:4px solid var(--primary);padding:13px;border-radius:10px;margin:18px 0}
 .instruction-box strong{color:var(--primary)}
@@ -203,7 +206,7 @@ main{min-height:calc(100vh - 130px)}
 .full-btn{width:100%;margin-top:4px}
 .formula-helper{margin-top:13px;background:#f7f4ff;border-radius:12px;padding:12px;font-size:.78rem;color:#574f71}
 .formula-helper p{margin:5px 0}
-.result-section{min-height:calc(100vh - 130px);display:grid;place-items:center}
+.result-section{min-height:calc(100dvh - 130px);display:grid;place-items:center}
 .result-card{max-width:900px;width:100%;background:white;border:1px solid var(--line);border-radius:30px;padding:44px;box-shadow:var(--shadow);text-align:center}
 .result-icon{font-size:4.4rem}
 .result-card h2{font-size:clamp(2rem,4vw,3.2rem);margin:5px 0 10px}
@@ -242,6 +245,27 @@ footer{text-align:center;color:var(--muted);padding:24px;font-size:.85rem}
 .challenge .data-strip,.challenge .cylinder-readout{filter:blur(6px);user-select:none}
 .challenge .formula-helper{display:none}
 .no-hints .hint-box,.no-hints .instruction-box{display:none}
+@media(min-width:1101px){
+  .lab-section{min-height:calc(100dvh - 72px);padding-block:clamp(18px,3.2vh,48px)}
+  .lab-header{margin-bottom:clamp(12px,2vh,24px)}
+  .lab-layout{height:clamp(500px,calc(100dvh - 220px),720px)}
+  .mission-panel,.record-panel,.experiment-stage{min-height:0;overflow-y:auto;scrollbar-gutter:stable}
+  .experiment-stage{display:flex;flex-direction:column}
+  .bench{flex:1;min-height:360px}
+}
+@media(min-width:1101px) and (max-height:800px){
+  .lab-layout{grid-template-columns:270px minmax(460px,1fr) 290px;gap:12px}
+  .mission-panel,.record-panel,.experiment-stage{padding:16px}
+  .mission-panel>p{margin-block:9px}
+  .instruction-box{margin:10px 0;padding:10px}
+  .hint-box{margin-top:9px;padding:9px}
+  .record-panel form{gap:7px;margin-top:10px}
+  .formula-helper{margin-top:9px;padding:9px}
+  .stage-message{margin-bottom:10px}
+  .bench{min-height:330px;padding-top:14px}
+  .apparatus{min-height:315px}
+  .data-strip{margin-top:10px}
+}
 @media(max-width:1100px){
   .hero{grid-template-columns:1fr;padding-top:45px}.hero-visual{max-width:720px}
   .lab-layout{grid-template-columns:260px 1fr}.record-panel{grid-column:1/-1}

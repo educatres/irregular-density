@@ -34,6 +34,8 @@ const els = {
   missionTitle: $("#missionTitle"),
   missionText: $("#missionText"),
   levelChip: $("#levelChip"),
+  categoryChip: $("#categoryChip"),
+  difficultyChip: $("#difficultyChip"),
   instructionText: $("#instructionText"),
   hintText: $("#hintText"),
   objectTray: $("#objectTray"),
@@ -154,7 +156,9 @@ function renderLevel() {
 
   els.missionTitle.textContent = level.title;
   els.missionText.textContent = level.description;
-  els.levelChip.textContent = `第 ${state.levelIndex + 1} 關`;
+  els.levelChip.textContent = `第 ${state.levelIndex + 1} / ${state.levels.length} 關`;
+  els.categoryChip.textContent = level.category || "材料鑑定";
+  els.difficultyChip.textContent = level.difficulty || "基礎";
   els.objectTray.innerHTML = "";
 
   const distractors = [

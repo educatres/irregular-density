@@ -7,7 +7,8 @@
 - 電子天平歸零與質量測量
 - 量筒排水動畫與視差模擬
 - 氣泡誤差與排除操作
-- 五個漸進式材料鑑定關卡
+- 八個漸進式材料鑑定關卡，含任務類型與難度標籤
+- 根據螢幕可視高度自動調整實驗區
 - 體積、密度計算與材料判斷
 - 即時提示、扣分與錯誤回饋
 - 課後反思題
@@ -79,6 +80,8 @@ https://educatres.github.io/irregular-density/
   "id": "aluminum",
   "title": "任務 1：鑑定神秘金屬",
   "description": "任務說明",
+  "category": "金屬鑑定",
+  "difficulty": "入門",
   "objectName": "銀灰零件",
   "symbol": "⬟",
   "mass": 54,

@@ -3,6 +3,8 @@
     "id": "aluminum",
     "title": "任務 1：鑑定神秘金屬",
     "description": "倉庫裡發現一塊輕巧的銀灰色零件，請測量它的密度並判斷材料。",
+    "category": "金屬鑑定",
+    "difficulty": "入門",
     "objectName": "銀灰零件",
     "symbol": "⬟",
     "mass": 54.0,
@@ -26,6 +28,8 @@
     "id": "glass",
     "title": "任務 2：透明碎片之謎",
     "description": "這塊透明碎片沒有規則形狀，請利用更細的刻度完成鑑定。",
+    "category": "生活材料",
+    "difficulty": "基礎",
     "objectName": "透明碎片",
     "symbol": "◇",
     "mass": 31.25,
@@ -49,6 +53,8 @@
     "id": "granite",
     "title": "任務 3：河床石頭",
     "description": "一顆外形粗糙的石頭卡在河床，請小心避免視差並判斷它的材料。",
+    "category": "地質樣本",
+    "difficulty": "基礎",
     "objectName": "河床石頭",
     "symbol": "◆",
     "mass": 66.25,
@@ -72,6 +78,8 @@
     "id": "iron",
     "title": "任務 4：沉重的黑色零件",
     "description": "這塊零件明顯比前幾個物體重，請用精確測量確認它是不是鐵。",
+    "category": "工業零件",
+    "difficulty": "進階",
     "objectName": "黑色零件",
     "symbol": "⬢",
     "mass": 94.44,
@@ -93,8 +101,10 @@
   },
   {
     "id": "copper",
-    "title": "最終任務：古老金屬片",
-    "description": "一片紅褐色古老金屬片等待鑑定。完成這關，你就是密度偵探！",
+    "title": "任務 5：古老金屬片",
+    "description": "一片紅褐色古老金屬片等待鑑定，請判斷是否為銅。",
+    "category": "文物鑑識",
+    "difficulty": "進階",
     "objectName": "古老金屬片",
     "symbol": "✦",
     "mass": 107.52,
@@ -112,6 +122,81 @@
       ],
       "answer": 0,
       "explain": "密度表示單位體積所含的質量，是辨識材料的重要物理性質。"
+    }
+  },
+  {
+    "id": "plastic",
+    "title": "任務 6：海灘上的神秘碎片",
+    "description": "淨灘時發現一塊不規則的彩色碎片，請測量密度並判斷是否為塑膠。",
+    "category": "環境調查",
+    "difficulty": "基礎",
+    "objectName": "彩色碎片",
+    "symbol": "◒",
+    "mass": 28.8,
+    "initialWater": 38.0,
+    "volume": 24.0,
+    "material": "塑膠",
+    "color": "#ef8354",
+    "bubble": false,
+    "reflection": {
+      "question": "如果兩個物體體積相同，密度較大的物體會如何？",
+      "options": [
+        "質量較大",
+        "質量較小",
+        "質量一定相同"
+      ],
+      "answer": 0,
+      "explain": "體積相同時，密度越大，質量也越大。"
+    }
+  },
+  {
+    "id": "zinc",
+    "title": "任務 7：實驗室的藍灰樣本",
+    "description": "標籤脫落的藍灰色金屬樣本需要重新分類，請判斷它是否為鋅。",
+    "category": "實驗室樣本",
+    "difficulty": "進階",
+    "objectName": "藍灰樣本",
+    "symbol": "⬣",
+    "mass": 85.68,
+    "initialWater": 47.0,
+    "volume": 12.0,
+    "material": "鋅",
+    "color": "#718b9e",
+    "bubble": true,
+    "reflection": {
+      "question": "為什麼鑑定材料時，密度比單看質量更可靠？",
+      "options": [
+        "密度不受物體大小直接影響",
+        "密度永遠等於質量",
+        "所有材料的密度都相同"
+      ],
+      "answer": 0,
+      "explain": "同一種均勻物質的密度大致固定，不會因樣本大小改變。"
+    }
+  },
+  {
+    "id": "brass",
+    "title": "最終任務：修復室的金色飾件",
+    "description": "一件金色古董飾件等待修復，請精確鑑定它是否由黃銅製成。",
+    "category": "文物修復",
+    "difficulty": "挑戰",
+    "objectName": "金色飾件",
+    "symbol": "✦",
+    "mass": 102.0,
+    "initialWater": 50.0,
+    "volume": 12.0,
+    "material": "黃銅",
+    "color": "#c99a2e",
+    "bubble": true,
+    "reflection": {
+      "question": "黃銅是銅與鋅的合金。合金密度最可能如何？",
+      "options": [
+        "介於或接近組成金屬的密度範圍",
+        "一定是零",
+        "一定大於所有金屬"
+      ],
+      "answer": 0,
+      "explain": "合金密度與組成金屬及比例有關，通常落在相關密度範圍內。"
     }
   }
 ]
