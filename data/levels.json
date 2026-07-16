@@ -1,0 +1,117 @@
+[
+  {
+    "id": "aluminum",
+    "title": "任務 1：鑑定神秘金屬",
+    "description": "倉庫裡發現一塊輕巧的銀灰色零件，請測量它的密度並判斷材料。",
+    "objectName": "銀灰零件",
+    "symbol": "⬟",
+    "mass": 54.0,
+    "initialWater": 40.0,
+    "volume": 20.0,
+    "material": "鋁",
+    "color": "#9aa9ad",
+    "bubble": false,
+    "reflection": {
+      "question": "為什麼量筒中的水量增加值，可以代表物體體積？",
+      "options": [
+        "物體排開了等體積的水",
+        "物體增加了水的質量",
+        "水會自動膨脹"
+      ],
+      "answer": 0,
+      "explain": "物體完全浸入水中時，排開的水體積等於物體浸入部分的體積。"
+    }
+  },
+  {
+    "id": "glass",
+    "title": "任務 2：透明碎片之謎",
+    "description": "這塊透明碎片沒有規則形狀，請利用更細的刻度完成鑑定。",
+    "objectName": "透明碎片",
+    "symbol": "◇",
+    "mass": 31.25,
+    "initialWater": 36.5,
+    "volume": 12.5,
+    "material": "玻璃",
+    "color": "#90d1da",
+    "bubble": true,
+    "reflection": {
+      "question": "若物體表面附著氣泡，計算出的密度通常會如何？",
+      "options": [
+        "偏大",
+        "偏小",
+        "完全不變"
+      ],
+      "answer": 1,
+      "explain": "氣泡會讓排水體積偏大；質量不變時，質量÷體積會變小。"
+    }
+  },
+  {
+    "id": "granite",
+    "title": "任務 3：河床石頭",
+    "description": "一顆外形粗糙的石頭卡在河床，請小心避免視差並判斷它的材料。",
+    "objectName": "河床石頭",
+    "symbol": "◆",
+    "mass": 66.25,
+    "initialWater": 47.0,
+    "volume": 25.0,
+    "material": "花崗岩",
+    "color": "#7b746d",
+    "bubble": true,
+    "reflection": {
+      "question": "物體若沒有完全浸入水中，計算出的密度通常會如何？",
+      "options": [
+        "偏大",
+        "偏小",
+        "不一定"
+      ],
+      "answer": 0,
+      "explain": "沒有完全浸入時，測得體積偏小；質量不變，因此密度會偏大。"
+    }
+  },
+  {
+    "id": "iron",
+    "title": "任務 4：沉重的黑色零件",
+    "description": "這塊零件明顯比前幾個物體重，請用精確測量確認它是不是鐵。",
+    "objectName": "黑色零件",
+    "symbol": "⬢",
+    "mass": 94.44,
+    "initialWater": 52.0,
+    "volume": 12.0,
+    "material": "鐵",
+    "color": "#4e5558",
+    "bubble": true,
+    "reflection": {
+      "question": "同一物體重複測量三次，數值略有不同，最合理的做法是？",
+      "options": [
+        "只留最高值",
+        "取多次測量平均",
+        "任選一次"
+      ],
+      "answer": 1,
+      "explain": "多次測量並取平均，可以降低隨機誤差對結果的影響。"
+    }
+  },
+  {
+    "id": "copper",
+    "title": "最終任務：古老金屬片",
+    "description": "一片紅褐色古老金屬片等待鑑定。完成這關，你就是密度偵探！",
+    "objectName": "古老金屬片",
+    "symbol": "✦",
+    "mass": 107.52,
+    "initialWater": 44.0,
+    "volume": 12.0,
+    "material": "銅",
+    "color": "#b66b45",
+    "bubble": true,
+    "reflection": {
+      "question": "密度最適合用來描述物質的哪一項特性？",
+      "options": [
+        "單位體積的質量",
+        "物體的總重量",
+        "物體表面的顏色"
+      ],
+      "answer": 0,
+      "explain": "密度表示單位體積所含的質量，是辨識材料的重要物理性質。"
+    }
+  }
+]

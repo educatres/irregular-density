@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f766e">
+  <meta name="description" content="國中理化：不規則物體密度測量互動教材">
+  <title>密度偵探社｜不規則物體密度測量</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="回到首頁">
+      <span class="brand-mark">ρ</span>
+      <span>
+        <strong>密度偵探社</strong>
+        <small>不規則物體密度測量</small>
+      </span>
+    </a>
+    <div class="top-actions">
+      <button class="ghost-btn" id="soundBtn" type="button" aria-pressed="true">🔊 音效</button>
+      <button class="ghost-btn" id="teacherBtn" type="button">⚙️ 教師設定</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="homeSection">
+      <div class="hero-copy">
+        <span class="eyebrow">國中理化互動實驗</span>
+        <h1>形狀不規則，<br><span>密度仍然量得出來！</span></h1>
+        <p>利用電子天平、量筒與排水法，完成神秘物體的材料鑑定任務。</p>
+        <div class="hero-actions">
+          <button class="primary-btn" id="startBtn" type="button">開始實驗</button>
+          <button class="secondary-btn" id="learnBtn" type="button">先看原理</button>
+        </div>
+        <div class="hero-points">
+          <span>✓ 免安裝</span><span>✓ 手機可用</span><span>✓ 可離線運作</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="lab-card">
+          <div class="mini-scale">
+            <div class="mini-object">?</div>
+            <div class="mini-platform"></div>
+            <div class="mini-display">54.0 g</div>
+          </div>
+          <div class="arrow">＋</div>
+          <div class="mini-cylinder">
+            <div class="mini-water"></div>
+            <div class="mini-rock">◆</div>
+          </div>
+          <div class="arrow">→</div>
+          <div class="mini-result">
+            <strong>2.70</strong>
+            <small>g/cm³</small>
+            <span>可能是鋁</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="concept-section hidden" id="conceptSection">
+      <div class="section-heading">
+        <span class="eyebrow">核心原理</span>
+        <h2>先找到質量與體積，再計算密度</h2>
+      </div>
+      <div class="concept-grid">
+        <article class="concept-card">
+          <span class="step-number">1</span>
+          <div class="concept-icon">⚖️</div>
+          <h3>測量質量</h3>
+          <p>先將電子天平歸零，再把物體放到秤盤上，讀取質量。</p>
+        </article>
+        <article class="concept-card">
+          <span class="step-number">2</span>
+          <div class="concept-icon">🧪</div>
+          <h3>排水法測體積</h3>
+          <p>物體體積＝放入後水量－原本水量。1 mL 等於 1 cm³。</p>
+        </article>
+        <article class="concept-card formula-card">
+          <span class="step-number">3</span>
+          <div class="formula">
+            <span>密度</span>
+            <strong>=</strong>
+            <span class="fraction"><b>質量</b><i></i><b>體積</b></span>
+          </div>
+          <p>使用 g 與 cm³ 時，密度單位為 g/cm³。</p>
+        </article>
+      </div>
+      <button class="primary-btn center-btn" id="conceptStartBtn" type="button">了解，進入實驗</button>
+    </section>
+
+    <section class="lab-section hidden" id="labSection">
+      <div class="lab-header">
+        <div>
+          <span class="eyebrow">虛擬實驗室</span>
+          <h2 id="missionTitle">任務 1：鑑定神秘金屬</h2>
+        </div>
+        <div class="progress-wrap">
+          <span id="progressLabel">步驟 1 / 6</span>
+          <div class="progress-bar"><i id="progressBar"></i></div>
+        </div>
+      </div>
+
+      <div class="lab-layout">
+        <aside class="mission-panel">
+          <div class="panel-title">
+            <h3>任務卡</h3>
+            <span class="level-chip" id="levelChip">第 1 關</span>
+          </div>
+          <p id="missionText">先選擇一個物體，並完成密度測量。</p>
+          <div class="instruction-box" id="instructionBox">
+            <strong>現在要做：</strong>
+            <p id="instructionText">從物體托盤選擇待測物。</p>
+          </div>
+
+          <div class="object-tray" id="objectTray" aria-label="物體托盤"></div>
+
+          <div class="tool-actions" id="toolActions">
+            <button type="button" data-action="tare">① 天平歸零</button>
+            <button type="button" data-action="weigh">② 放到天平</button>
+            <button type="button" data-action="water">③ 準備量筒</button>
+            <button type="button" data-action="immerse">④ 完全浸入</button>
+            <button type="button" data-action="remove-bubble">⑤ 排除氣泡</button>
+          </div>
+
+          <div class="hint-box" id="hintBox">
+            <span>💡</span>
+            <p id="hintText">天平在沒有放置物體時，讀數應為 0.0 g。</p>
+          </div>
+        </aside>
+
+        <section class="experiment-stage" aria-label="實驗操作區">
+          <div class="stage-message" id="stageMessage">請從左側選擇一個物體</div>
+
+          <div class="bench">
+            <div class="apparatus scale-apparatus" id="scaleZone">
+              <div class="apparatus-title">電子天平</div>
+              <div class="scale-object-holder" id="scaleObjectHolder"></div>
+              <div class="scale-platform"></div>
+              <div class="scale-body">
+                <div class="scale-display" id="scaleDisplay">0.8 g</div>
+                <button id="tareBtn" type="button">TARE 歸零</button>
+              </div>
+            </div>
+
+            <div class="apparatus cylinder-apparatus" id="cylinderZone">
+              <div class="apparatus-title">100 mL 量筒</div>
+              <div class="eye-control">
+                <span>視線：</span>
+                <button type="button" data-eye="high">偏高</button>
+                <button type="button" data-eye="level" class="active">同高</button>
+                <button type="button" data-eye="low">偏低</button>
+              </div>
+
+              <div class="cylinder-wrap">
+                <div class="eye-line" id="eyeLine"><span>👁</span></div>
+                <div class="cylinder">
+                  <div class="ticks"></div>
+                  <div class="water" id="water">
+                    <div class="meniscus"></div>
+                  </div>
+                  <div class="immersed-object" id="immersedObject"></div>
+                  <div class="bubble" id="bubble">○</div>
+                </div>
+                <div class="cylinder-base"></div>
+              </div>
+              <div class="cylinder-readout">
+                讀值：<strong id="cylinderDisplay">—</strong> mL
+              </div>
+            </div>
+          </div>
+
+          <div class="data-strip">
+            <div><span>質量</span><strong id="massReadout">—</strong><small>g</small></div>
+            <div><span>原始水量</span><strong id="initialReadout">—</strong><small>mL</small></div>
+            <div><span>放入後</span><strong id="finalReadout">—</strong><small>mL</small></div>
+          </div>
+        </section>
+
+        <aside class="record-panel">
+          <div class="panel-title">
+            <h3>實驗紀錄</h3>
+            <span class="score-chip">分數 <b id="score">100</b></span>
+          </div>
+
+          <form id="recordForm" novalidate>
+            <label>
+              <span>物體質量</span>
+              <div class="input-unit"><input id="massInput" type="number" step="0.1" placeholder="例如 54.0"><b>g</b></div>
+            </label>
+            <label>
+              <span>原始水量</span>
+              <div class="input-unit"><input id="initialInput" type="number" step="0.1" placeholder="例如 40.0"><b>mL</b></div>
+            </label>
+            <label>
+              <span>放入後水量</span>
+              <div class="input-unit"><input id="finalInput" type="number" step="0.1" placeholder="例如 60.0"><b>mL</b></div>
+            </label>
+            <label>
+              <span>物體體積</span>
+              <div class="input-unit"><input id="volumeInput" type="number" step="0.1" placeholder="後－前"><b>cm³</b></div>
+            </label>
+            <label>
+              <span>物體密度</span>
+              <div class="input-unit"><input id="densityInput" type="number" step="0.01" placeholder="質量÷體積"><b>g/cm³</b></div>
+            </label>
+            <label>
+              <span>推測材料</span>
+              <select id="materialSelect">
+                <option value="">請選擇</option>
+                <option value="軟木">軟木（約 0.24）</option>
+                <option value="塑膠">塑膠（約 0.9～1.4）</option>
+                <option value="玻璃">玻璃（約 2.5）</option>
+                <option value="鋁">鋁（約 2.70）</option>
+                <option value="花崗岩">花崗岩（約 2.65～2.75）</option>
+                <option value="鐵">鐵（約 7.87）</option>
+                <option value="銅">銅（約 8.96）</option>
+              </select>
+            </label>
+            <button class="primary-btn full-btn" id="submitBtn" type="submit">提交鑑定結果</button>
+          </form>
+
+          <div class="formula-helper">
+            <strong>計算提示</strong>
+            <p>體積＝放入後水量－原始水量</p>
+            <p>密度＝質量÷體積</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="result-section hidden" id="resultSection">
+      <div class="result-card">
+        <div class="result-icon" id="resultIcon">🏅</div>
+        <span class="eyebrow">鑑定完成</span>
+        <h2 id="resultTitle">材料判斷正確！</h2>
+        <p id="resultMessage"></p>
+
+        <div class="result-metrics">
+          <div><span>質量</span><strong id="resultMass">—</strong><small>g</small></div>
+          <div><span>體積</span><strong id="resultVolume">—</strong><small>cm³</small></div>
+          <div><span>密度</span><strong id="resultDensity">—</strong><small>g/cm³</small></div>
+          <div><span>得分</span><strong id="resultScore">—</strong><small>分</small></div>
+        </div>
+
+        <div class="reflection-card">
+          <h3>想一想</h3>
+          <p id="reflectionQuestion">若物體表面有氣泡，測得的密度會偏大還是偏小？</p>
+          <div class="reflection-options" id="reflectionOptions"></div>
+          <p class="reflection-feedback" id="reflectionFeedback"></p>
+        </div>
+
+        <div class="result-actions">
+          <button class="primary-btn" id="nextLevelBtn" type="button">下一關</button>
+          <button class="secondary-btn" id="downloadReportBtn" type="button">下載實驗紀錄</button>
+          <button class="ghost-dark-btn" id="restartBtn" type="button">重新開始</button>
+        </div>
+      </div>
+    </section>
+
+    <dialog id="teacherDialog">
+      <form method="dialog" class="dialog-card">
+        <div class="dialog-header">
+          <div>
+            <span class="eyebrow">教師設定</span>
+            <h2>調整教材難度</h2>
+          </div>
+          <button class="close-btn" value="cancel" aria-label="關閉">×</button>
+        </div>
+        <label class="switch-row">
+          <span><b>顯示操作提示</b><small>保留逐步教學與提示訊息</small></span>
+          <input id="showHintsSetting" type="checkbox" checked>
+        </label>
+        <label class="switch-row">
+          <span><b>自動填入測量值</b><small>完成操作後，自動寫入紀錄表</small></span>
+          <input id="autoFillSetting" type="checkbox">
+        </label>
+        <label class="switch-row">
+          <span><b>開啟氣泡誤差</b><small>放入物體時可能附著氣泡</small></span>
+          <input id="bubbleSetting" type="checkbox" checked>
+        </label>
+        <label class="switch-row">
+          <span><b>挑戰模式</b><small>隱藏部分直接讀值與公式提示</small></span>
+          <input id="challengeSetting" type="checkbox">
+        </label>
+        <div class="dialog-actions">
+          <button class="primary-btn" id="saveSettingsBtn" value="default">套用設定</button>
+        </div>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+
+  <footer>
+    <p>密度偵探社｜純前端互動教材，可部署於 GitHub Pages</p>
+  </footer>
+
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>
